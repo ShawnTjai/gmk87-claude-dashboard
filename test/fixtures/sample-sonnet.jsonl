@@ -1,0 +1,7 @@
+{"type":"summary","timestamp":"2026-06-02T10:00:00.000Z"}
+{"type":"user","timestamp":"2026-06-02T10:00:01.000Z","message":{"role":"user","content":"hello"}}
+{"type":"assistant","timestamp":"2026-06-02T10:00:02.000Z","message":{"id":"msg_1","model":"claude-sonnet-4-6","usage":{"input_tokens":100,"cache_creation_input_tokens":200,"cache_read_input_tokens":1000,"output_tokens":50}}}
+{"type":"assistant","timestamp":"2026-06-02T10:00:02.500Z","message":{"id":"msg_1","model":"claude-sonnet-4-6","usage":{"input_tokens":100,"cache_creation_input_tokens":200,"cache_read_input_tokens":1000,"output_tokens":50}}}
+{"type":"assistant","timestamp":"2026-06-02T10:00:02.800Z","message":{"id":"msg_1","model":"claude-sonnet-4-6","usage":{"input_tokens":100,"cache_creation_input_tokens":200,"cache_read_input_tokens":1000,"output_tokens":50}}}
+{"type":"assistant","timestamp":"2026-06-02T10:00:05.000Z","message":{"id":"msg_2","model":"claude-sonnet-4-6","usage":{"input_tokens":150,"output_tokens":75}}}
+{"type":"assistant","timestamp":"2026-05-30T22:00:00.000Z","message":{"id":"msg_old","model":"claude-sonnet-4-6","usage":{"input_tokens":99999,"output_tokens":99999}}}

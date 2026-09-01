@@ -1,0 +1,41 @@
+{
+  "name": "gmk87-claude-dashboard",
+  "version": "1.0.0",
+  "description": "Live dev-ops dashboard on a GMK87 keyboard's TFT screen: Claude Code usage, CI/CD pipelines, cloud spend, and uptime.",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test test/**/*.test.js",
+    "install-hook": "node src/install-hook.js",
+    "uninstall-hook": "node src/uninstall-hook.js",
+    "install-task": "powershell -ExecutionPolicy Bypass -File scripts/install-task-scheduler.ps1",
+    "uninstall-task": "powershell -ExecutionPolicy Bypass -File scripts/uninstall-task-scheduler.ps1"
+  },
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "gif-encoder-2": "^1.0.5",
+    "gmk87-node": "file:third_party/gmk87-node",
+    "sharp": "^0.33.5",
+    "uiohook-napi": "^1.5.5"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "author": "Shawn Tjai",
+  "license": "MIT",
+  "homepage": "https://github.com/ShawnTjai/gmk87-claude-dashboard#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShawnTjai/gmk87-claude-dashboard.git"
+  },
+  "keywords": [
+    "gmk87",
+    "keyboard",
+    "tft-display",
+    "claude-code",
+    "dashboard",
+    "hid",
+    "devops"
+  ]
+}

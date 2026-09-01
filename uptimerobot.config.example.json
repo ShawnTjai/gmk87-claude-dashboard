@@ -1,0 +1,5 @@
+{
+  "_comment": "Copy to uptimerobot.config.json (gitignored). Use a Read-Only API Key from https://dashboard.uptimerobot.com/integrations. The daemon polls monitor status; any DOWN monitor pins the uptime slide as a priority alert.",
+
+  "apiKey": "REPLACE_WITH_READONLY_API_KEY"
+}

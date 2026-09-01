@@ -1,0 +1,20 @@
+{
+  "_comment": "Copy to cloudflare.config.json (gitignored). One entry per API token. A single token can cover multiple accounts if the user who created it has access to all of them; in that case put all account IDs in one entry. See the README (Integrations section) for permission scopes.",
+
+  "tokens": [
+    {
+      "label": "primary",
+      "apiToken": "REPLACE_WITH_TOKEN_VALUE",
+      "accountIds": [
+        "00000000000000000000000000000000"
+      ]
+    },
+    {
+      "label": "secondary",
+      "apiToken": "REPLACE_WITH_TOKEN_VALUE",
+      "accountIds": [
+        "00000000000000000000000000000000"
+      ]
+    }
+  ]
+}

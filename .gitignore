@@ -1,0 +1,19 @@
+node_modules/
+.cache/
+.runtime/
+*.log
+dist/
+*.tmp
+
+# Transient render artifacts produced by daemon/scripts.
+out.gif
+out.png
+debug-last.svg
+
+# Secrets / config — never commit. Use the *.example files as templates.
+azure.config.json
+cloudflare.config.json
+gitlab.config.json
+github.config.json
+uptimerobot.config.json
+.env

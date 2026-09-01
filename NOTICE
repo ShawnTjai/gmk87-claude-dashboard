@@ -1,0 +1,20 @@
+gmk87-claude-dashboard
+Copyright (c) 2026 Shawn Tjai
+
+This product bundles the following third-party software.
+
+-------------------------------------------------------------------------------
+gmk87-node (package name: gmk87-hid-uploader), v1.0.4
+Location in this repo: third_party/gmk87-node/
+Source:  https://github.com/codedgar/gmk87-node
+License: MIT, Copyright (c) 2025 Edgar Pérez
+-------------------------------------------------------------------------------
+
+The daemon talks to the GMK87 keyboard through this library (HID image upload,
+lighting control, time sync). Only the runtime library is bundled: the src/
+modules, package.json, presets.json, the udev rule, and the upstream LICENSE
+and README. The upstream Electron app, documentation site, and packet-capture
+files are not included because the daemon does not need them.
+
+The bundled code is unmodified from upstream v1.0.4. Its full license text is
+kept verbatim at third_party/gmk87-node/LICENSE, as the MIT license requires.

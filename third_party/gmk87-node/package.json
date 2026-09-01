@@ -1,0 +1,116 @@
+{
+  "name": "gmk87-hid-uploader",
+  "version": "1.0.4",
+  "description": "Node.js utilities for uploading images and syncing time on GMK87 keyboard displays via HID protocol",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "exports": {
+    ".": "./src/api.js"
+  },
+  "scripts": {
+    "electron": "electron .",
+    "dist": "electron-builder --mac --win --linux",
+    "dist:mac": "electron-builder --mac",
+    "dist:win": "electron-builder --win",
+    "dist:linux": "electron-builder --linux",
+    "rebuild": "electron-rebuild",
+    "timesync": "node src/timesync.js",
+    "upload": "node src/uploadImage.js",
+    "sendimage": "node src/sendImageMagick.js",
+    "lights": "node src/configureLights.js",
+    "preset": "node src/loadPreset.js",
+    "examples": "node src/examples.js",
+    "docs": "node docs/serve.js"
+  },
+  "bin": {
+    "gmk87-timesync": "./src/timesync.js",
+    "gmk87-upload": "./src/uploadImage.js",
+    "gmk87-sendimage": "./src/sendImageMagick.js",
+    "gmk87-lights": "./src/configureLights.js",
+    "gmk87-preset": "./src/loadPreset.js",
+    "gmk87-examples": "./src/examples.js"
+  },
+  "dependencies": {
+    "@jaames/iro": "^5.5.2",
+    "jimp": "^0.22.10",
+    "node-hid": "^3.3.0"
+  },
+  "devDependencies": {
+    "@electron/notarize": "^3.1.1",
+    "@electron/rebuild": "^3.7.1",
+    "electron": "^33.0.0",
+    "electron-builder": "^26.8.1"
+  },
+  "build": {
+    "appId": "com.codedgar.gmk87-configurator",
+    "productName": "GMK87 Configurator",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "electron/**/*",
+      "src/**/*",
+      "node_modules/**/*",
+      "presets.json"
+    ],
+    "mac": {
+      "icon": "electron/assets/icon.icns",
+      "category": "public.app-category.utilities",
+      "target": "dmg",
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
+      "entitlements": "electron/entitlements.mac.plist",
+      "entitlementsInherit": "electron/entitlements.mac.plist"
+    },
+    "win": {
+      "icon": "electron/assets/icon.ico",
+      "target": "nsis"
+    },
+    "linux": {
+      "icon": "electron/assets/icon.png",
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility",
+      "extraFiles": [
+        {
+          "from": "50-gmk87.rules",
+          "to": "."
+        },
+        {
+          "from": "electron/linux-setup.txt",
+          "to": "."
+        }
+      ]
+    },
+    "deb": {
+      "afterInstall": "electron/scripts/postinst.sh"
+    }
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "keywords": [
+    "gmk87",
+    "hid",
+    "keyboard",
+    "display",
+    "image-upload",
+    "time-sync"
+  ],
+  "author": {
+    "name": "Codedgar",
+    "email": "edgar@codedgar.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codedgar/gmk87-node"
+  },
+  "overrides": {
+    "node-hid": {
+      "node-addon-api": "^7.1.0"
+    }
+  }
+}

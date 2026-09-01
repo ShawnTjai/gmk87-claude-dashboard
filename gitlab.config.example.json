@@ -1,0 +1,10 @@
+{
+  "_comment": "Copy to gitlab.config.json (gitignored). Token needs 'read_api' scope. Get one at https://gitlab.com/-/user_settings/personal_access_tokens. Membership scope means we fetch only projects you're a member of.",
+
+  "host": "https://gitlab.com",
+  "token": "glpat-REPLACE_WITH_TOKEN_VALUE",
+  "_projectScope_comment": "membership (default) = your projects only · all = everything you can see · starred = only starred",
+  "projectScope": "membership",
+  "_maxProjects_comment": "How many projects (sorted by latest activity) to scan each refresh. 30 keeps the GraphQL response small.",
+  "maxProjects": 30
+}

@@ -1,0 +1,9 @@
+{
+  "_comment": "Copy to github.config.json (gitignored). Token needs 'repo' scope (classic PAT) or fine-grained with Actions: Read. Get one at https://github.com/settings/tokens. The daemon will list your most-recently-pushed repos and fetch the latest workflow run for each.",
+
+  "token": "ghp_REPLACE_WITH_TOKEN_VALUE",
+  "_affiliation_comment": "Comma-list: owner, collaborator, organization_member. Default covers all three.",
+  "affiliation": "owner,collaborator,organization_member",
+  "_maxRepos_comment": "How many recently-pushed repos to scan each refresh. Each repo = 1 extra API call, so keep modest.",
+  "maxRepos": 30
+}
